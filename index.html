@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio Keren</title>
-  <link rel="stylesheet" href="style-fixed.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4eae3a7e37.js" crossorigin="anonymous"></script>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #1f1c2c, #928dab);
       color: white;
@@ -21,11 +26,15 @@
       padding: 20px 40px;
       background-color: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.5em;
+      color: #ff4081;
     }
 
     nav ul {
@@ -53,8 +62,16 @@
       padding: 60px 20px;
     }
 
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+
     .intro h1 span {
       color: #ff4081;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
     }
 
     .cta {
@@ -85,6 +102,12 @@
       text-align: center;
     }
 
+    section h2 {
+      font-size: 2rem;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+
     .skills-list, .projects-list {
       display: flex;
       justify-content: center;
@@ -113,6 +136,13 @@
       padding: 10px;
       border: none;
       border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    form textarea {
+      height: 120px;
+      resize: vertical;
     }
 
     button {
@@ -142,7 +172,6 @@
       background: rgba(0,0,0,0.4);
     }
 
-    /* Spotify Playlist */
     .spotify-section {
       padding: 60px 40px;
       background-color: rgba(0, 0, 0, 0.3);
@@ -213,9 +242,11 @@
   <section class="spotify-section">
     <h2>Playlist Favorit Saya</h2>
     <p>Dengarkan playlist favorit saya sambil menjelajahi portofolio ini.</p>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/playlist/7sUQVs2bAy4s7Ct1WdNNj0?si=TX7svtsOSAu-YiugGgktWw&pi=V0phl9UTSXOI4"
-      width="100%" height="152" frameBorder="0" allowfullscreen=" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"loading="lazy">
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/playlist/7sUQVs2bAy4s7Ct1WdNNj0?utm_source=generator"
+      width="100%" height="152" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
     </iframe>
   </section>
 
@@ -243,6 +274,5 @@
   <footer>
     &copy; 2025 ALFHIN HIDAYAT. All Rights Reserved.
   </footer>
-  <script src="https://kit.fontawesome.com/4eae3a7e37.js" crossorigin="anonymous"></script>
 </body>
 </html>

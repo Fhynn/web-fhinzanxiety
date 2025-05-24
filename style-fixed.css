@@ -1,5 +1,4 @@
-/* style-fixed.css */
-
+/* Gaya umum */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +7,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* Mengganti URL gambar latar belakang dengan gambar Meliodas */
-  background: url('https://i.supa.codes/dD6djl') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #000;
   color: white;
   line-height: 1.6;
+  padding-top: 80px; /* agar tidak ketiban navbar */
 }
 
 /* Navbar */
@@ -23,8 +21,10 @@ nav {
   padding: 20px 40px;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
 
@@ -49,6 +49,22 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ff4081;
+}
+
+/* Toggle Mode */
+.toggle-mode {
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.toggle-mode label {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+}
+.toggle-mode input {
+  display: none;
 }
 
 /* Header */
@@ -95,7 +111,7 @@ header {
   object-fit: cover;
 }
 
-/* Sections */
+/* Section */
 section {
   padding: 80px 40px;
   text-align: center;
@@ -159,7 +175,8 @@ form {
   align-items: center;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 80%;
   margin-bottom: 15px;
   padding: 12px;
@@ -168,6 +185,11 @@ form input, form textarea {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 1rem;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #f2f2f2;
 }
 
 form textarea {
@@ -190,7 +212,7 @@ button:hover {
   background: #e73370;
 }
 
-/* Sosmed */
+/* Sosial media */
 .sosmed {
   margin-top: 30px;
 }
@@ -200,11 +222,12 @@ button:hover {
   color: white;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .sosmed a:hover {
   color: #ff4081;
+  transform: translateY(-2px);
 }
 
 /* Footer */
@@ -213,4 +236,78 @@ footer {
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  header {
+    padding: 60px 20px;
+  }
+
+  .skills-list, .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input, form textarea {
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Animasi Fade In Saat Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+body.light-mode nav {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode nav ul li a {
+  color: #111;
+}
+
+body.light-mode nav ul li a:hover {
+  color: #ff4081;
+}
+
+body.light-mode .cta,
+body.light-mode button {
+  background: #ff4081;
+  color: white;
+}
+
+body.light-mode .project-card,
+body.light-mode .skill-item {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
 }

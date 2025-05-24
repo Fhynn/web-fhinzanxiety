@@ -8,7 +8,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('https://wallpaperaccess.com/full/1311935.jpg') no-repeat center center fixed;
+  /* Mengganti URL gambar latar belakang dengan gambar Meliodas */
+  background: url('https://i.supa.codes/dD6djl') no-repeat center center fixed;
   background-size: cover;
   color: white;
   line-height: 1.6;
